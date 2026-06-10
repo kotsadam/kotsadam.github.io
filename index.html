@@ -76,7 +76,6 @@
         <a href="files/cv-andreas-kotsadam.pdf">📄 CV (PDF)</a>
         <a href="https://scholar.google.com/citations?user=TPk54IoAAAAJ&hl=en">🎓 Google Scholar</a>
         <a href="https://x.com/kotsadam">𝕏 @kotsadam</a>
-        <a href="https://www.frisch.uio.no/english/people/aud/andreaskotsadam/">🏛 Frisch profile</a>
       </div>
     </div>
   </div>
@@ -738,7 +737,17 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Open external and file links in a new tab; leave in-page #anchors and mailto: alone
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (href && href.charAt(0) !== '#' && href.indexOf('mailto:') !== 0) {
+      a.target = '_blank';
+      a.rel = 'noopener';
+    }
+  });
+</script>
 
 <!-- Privacy-friendly, cookieless analytics (GoatCounter) -->
 <script data-goatcounter="https://kotsadam.goatcounter.com/count"
