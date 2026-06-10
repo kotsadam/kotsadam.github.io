@@ -1,2 +1,9 @@
 # Stray files that should not be published to the website
 for_cevaw.txt
+
+# LaTeX build artifacts (cv.tex is the source; the published PDF lives in files/)
+cv.aux
+cv.log
+cv.out
+cv.pdf
+cvpage-*.png
