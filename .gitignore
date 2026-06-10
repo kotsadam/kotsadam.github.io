@@ -1,5 +1,8 @@
-# Stray files that should not be published to the website
+# Stray / private files that should not be published to the website
 for_cevaw.txt
+*.docx
+~$*
+docx-dump.txt
 
 # LaTeX build artifacts (cv.tex is the source; the published PDF lives in files/)
 cv.aux
