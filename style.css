@@ -1,0 +1,133 @@
+/* =========================================================
+   Andreas Kotsadam — academic homepage
+   Single stylesheet. Plain CSS, no build step.
+   ========================================================= */
+
+:root {
+  --ink:      #1c1c1e;   /* main text            */
+  --muted:    #5c6066;   /* secondary text       */
+  --accent:   #1a4d7a;   /* deep blue links      */
+  --accent-2: #0f3a5e;   /* darker hover         */
+  --line:     #e4e6ea;   /* hairlines            */
+  --bg:       #ffffff;
+  --bg-soft:  #f7f8fa;   /* alternating sections */
+  --tag:      #eef2f7;   /* link-pill background */
+  --maxw:     820px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-2); text-decoration: underline; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+/* ---------- top navigation ---------- */
+nav.topbar {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+nav.topbar .wrap {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 4px 20px; padding-top: 12px; padding-bottom: 12px;
+}
+nav.topbar .brand { font-weight: 700; margin-right: auto; }
+nav.topbar a { color: var(--muted); font-size: 15px; }
+nav.topbar a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- header / hero ---------- */
+header.hero { padding: 48px 0 30px; }
+header.hero .wrap {
+  display: flex; gap: 32px; align-items: center; flex-wrap: wrap;
+}
+.hero-photo {
+  width: 150px; height: 150px; border-radius: 50%;
+  flex-shrink: 0; border: 1px solid var(--line);
+  /* zoomed + panned onto the face (landscape source photo) */
+  background-image: url('picture_kotsadam_2025.jpg');
+  background-repeat: no-repeat;
+  background-size: 210% auto;
+  background-position: 38% 9%;
+}
+.hero-text h1 { margin: 0 0 6px; font-size: 34px; letter-spacing: -0.5px; }
+.hero-text .roles { margin: 0 0 4px; color: var(--muted); font-size: 16px; }
+.hero-text .roles strong { color: var(--ink); font-weight: 600; }
+
+/* contact / profile link row */
+.links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.links a {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; padding: 5px 12px; border-radius: 20px;
+  background: var(--tag); color: var(--accent);
+}
+.links a:hover { background: #e2e9f2; text-decoration: none; }
+
+/* ---------- sections ---------- */
+section { padding: 34px 0; border-top: 1px solid var(--line); }
+section:nth-of-type(even) { background: var(--bg-soft); }
+section h2 {
+  font-size: 22px; margin: 0 0 18px;
+  display: inline-block; padding-bottom: 4px;
+  border-bottom: 3px solid var(--accent);
+}
+section > .wrap > p:first-of-type { margin-top: 0; }
+
+.lead { font-size: 18px; color: var(--ink); }
+
+/* ---------- publication / paper lists ---------- */
+ol.pubs, ul.pubs { list-style: none; margin: 0; padding: 0; }
+ol.pubs > li, ul.pubs > li {
+  padding: 14px 0; border-bottom: 1px solid var(--line);
+}
+ol.pubs > li:last-child, ul.pubs > li:last-child { border-bottom: 0; }
+.pub-title { font-weight: 600; }
+.pub-meta  { color: var(--muted); font-size: 15.5px; }
+.pub-meta em { font-style: italic; }
+.status {
+  display: inline-block; font-size: 12.5px; font-weight: 600;
+  color: var(--accent-2); background: var(--tag);
+  padding: 1px 8px; border-radius: 10px; margin-left: 6px;
+  vertical-align: 1px;
+}
+
+/* small resource links under an entry */
+.reslinks { margin-top: 5px; font-size: 14px; }
+.reslinks a {
+  display: inline-block; margin-right: 14px; white-space: nowrap;
+}
+.reslinks a::before { content: "\2192\00a0"; color: var(--muted); }
+
+/* ---------- contact ---------- */
+.contact-grid { display: grid; gap: 4px; }
+.contact-grid div { padding: 2px 0; }
+.contact-grid .label { color: var(--muted); display: inline-block; min-width: 96px; }
+
+/* ---------- footer ---------- */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 26px 0 40px; color: var(--muted); font-size: 14px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  header.hero .wrap { gap: 20px; }
+  .hero-photo { width: 110px; height: 110px; }
+  .hero-text h1 { font-size: 27px; }
+  nav.topbar .brand { width: 100%; margin-bottom: 4px; }
+}
