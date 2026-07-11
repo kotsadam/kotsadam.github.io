@@ -49,6 +49,9 @@ nav.topbar .wrap {
 nav.topbar .brand { font-weight: 700; margin-right: auto; }
 nav.topbar a { color: var(--muted); font-size: 15px; }
 nav.topbar a:hover { color: var(--accent); text-decoration: none; }
+nav.topbar a.brand { color: var(--ink); font-size: inherit; }
+nav.topbar a.brand:hover { color: var(--accent); }
+nav.topbar a.active { color: var(--accent); font-weight: 600; }
 
 /* ---------- header / hero ---------- */
 header.hero { padding: 48px 0 30px; }

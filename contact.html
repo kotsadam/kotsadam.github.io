@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Andreas Kotsadam</title>
+  <meta name="description" content="Contact information for Andreas Kotsadam, Senior Researcher at the Frisch Centre and Professor of Economics at the University of Oslo.">
+  <link rel="canonical" href="https://kotsadam.github.io/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Andreas Kotsadam">
+  <meta property="og:description" content="Contact information for Andreas Kotsadam, Senior Researcher at the Frisch Centre and Professor of Economics at the University of Oslo.">
+  <meta property="og:url" content="https://kotsadam.github.io/contact.html">
+  <meta property="og:image" content="https://kotsadam.github.io/picture_kotsadam_2025.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact — Andreas Kotsadam">
+  <meta name="twitter:description" content="Contact information for Andreas Kotsadam, Senior Researcher at the Frisch Centre and Professor of Economics at the University of Oslo.">
+  <meta name="twitter:image" content="https://kotsadam.github.io/picture_kotsadam_2025.jpg">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>AK</text></svg>">
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Andreas Kotsadam</a>
+    <a href="index.html">About</a>
+    <a href="selected-publications.html">Selected publications</a>
+    <a href="work-in-progress.html">Work in progress</a>
+    <a href="publications.html">Publications</a>
+    <a href="files/cv-andreas-kotsadam.pdf">CV</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div><span class="label">Email</span><a href="mailto:andreas.kotsadam@frisch.uio.no">andreas.kotsadam@frisch.uio.no</a></div>
+      <div><span class="label">Phone</span>+47 40 33 81 76</div>
+      <div><span class="label">Affiliation</span>The Frisch Centre, Gaustadalléen 21, 0349 Oslo, Norway</div>
+      <div><span class="label">Scholar</span><a href="https://scholar.google.com/citations?user=TPk54IoAAAAJ&hl=en">Google Scholar profile</a></div>
+      <div><span class="label">X</span><a href="https://x.com/kotsadam">@kotsadam</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="yr">2025</span> Andreas Kotsadam. Senior Researcher, the Frisch Centre · Professor of Economics, University of Oslo.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Open external links and documents in a new tab;
+  // leave internal page navigation, #anchors and mailto: alone
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || href.indexOf('mailto:') === 0) return;
+    if (a.hostname === location.hostname && /\.html?$|\/$/.test(a.pathname)) return;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+</script>
+
+<!-- Privacy-friendly, cookieless analytics (GoatCounter) -->
+<script data-goatcounter="https://kotsadam.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
