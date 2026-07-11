@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kotsadam.github.io/selected-publications.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://kotsadam.github.io/work-in-progress.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
