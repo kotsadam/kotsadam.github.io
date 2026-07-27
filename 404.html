@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Andreas Kotsadam</title>
+  <meta name="robots" content="noindex">
+  <!-- Absolute paths (leading /) are required: GitHub Pages serves this file
+       for a missing URL at ANY depth, so relative asset paths would break. -->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>AK</text></svg>">
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/index.html">Andreas Kotsadam</a>
+    <a href="/index.html">About</a>
+    <a href="/index.html#selected">Selected publications</a>
+    <a href="/work-in-progress.html">Work in progress</a>
+    <a href="/publications.html">Publications</a>
+    <a href="/files/cv-andreas-kotsadam.pdf">CV</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<section>
+  <div class="wrap">
+    <h2>Page not found</h2>
+    <p class="lead">Sorry — the page or file you were looking for isn’t here. It may have been moved or renamed.</p>
+    <p>Try the <a href="/index.html">homepage</a>, the <a href="/publications.html">full list of publications</a>, or my <a href="/work-in-progress.html">work in progress</a>. If you followed a link from one of my papers, please <a href="mailto:andreas.kotsadam@frisch.uio.no">email me</a> and I’ll point you to the right file.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="yr">2025</span> Andreas Kotsadam. Senior Researcher, the Frisch Centre · Professor of Economics, University of Oslo.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+<!-- Privacy-friendly, cookieless analytics (GoatCounter).
+     On a 404 the browser keeps the requested (missing) URL in the address bar,
+     so location.pathname IS the broken link. Recording it under a "404" prefix
+     groups all broken-link hits together in the dashboard, e.g.
+     "404 /files/renamed-paper.pdf". This block MUST come before count.js. -->
+<script>
+  window.goatcounter = {
+    path: '404 ' + location.pathname + location.search
+  };
+</script>
+<script data-goatcounter="https://kotsadam.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
