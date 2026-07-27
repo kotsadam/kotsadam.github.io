@@ -10,3 +10,18 @@ cv.log
 cv.out
 cv.pdf
 cvpage-*.png
+
+# Private local citation-analysis pipeline (not published to the website)
+scholar_analysis/
+
+# Private job-application drafts (not published to the website)
+applications/
+
+# Personal / sensitive documents — NEVER publish. Kept in private/ (ignored).
+# Filename patterns are belt-and-suspenders in case a copy lands in the root again.
+private/
+Passport.*
+pass.jpg
+Signature.png
+*Bank reference letter*
+Travel_bills_etc/
